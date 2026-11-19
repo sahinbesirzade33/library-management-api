@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - include:
+      file: changes/001-create-book.yaml
+      relativeToChangelogFile: true
+
+  - include:
+      file: changes/002-create-member.yaml
+      relativeToChangelogFile: true
+
+  - include:
+      file: changes/003-create-loan.yaml
+      relativeToChangelogFile: true

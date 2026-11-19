@@ -1,0 +1,47 @@
+
+databaseChangeLog:
+  - changeSet:
+      id: 001
+      author: sahin
+      changes:
+        - createTable:
+            tableName: book
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+
+              - column:
+                  name: title
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: author
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: isbn
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+                    unique: true
+
+              - column:
+                  name: total_copies
+                  type: INT
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: available_copies
+                  type: INT
+                  constraints:
+                    nullable: false
