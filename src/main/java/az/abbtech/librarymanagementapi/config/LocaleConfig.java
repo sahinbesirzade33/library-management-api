@@ -12,9 +12,8 @@ import java.util.Locale;
 @Configuration
 public class LocaleConfig {
 
-    @Bean
+    @Bean(name = "localeResolver")
     public LocaleResolver localeResolver() {
-
         AcceptHeaderLocaleResolver resolver =
                 new AcceptHeaderLocaleResolver();
 
@@ -23,6 +22,7 @@ public class LocaleConfig {
         resolver.setSupportedLocales(
                 List.of(
                         Locale.forLanguageTag("az"),
+                        Locale.forLanguageTag("az-AZ"),
                         Locale.ENGLISH
                 )
         );
